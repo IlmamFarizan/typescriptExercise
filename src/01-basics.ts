@@ -1,3 +1,20 @@
+interface Friend {
+  name: string;
+  phone: string;
+  age: number;
+}
+
+interface Colleague {
+  name: string;
+  department: string;
+  contact: { email: string; extension: number };
+}
+
+interface ColleagueHistory {
+  current: Colleague[];
+  former: Colleague[];
+}
+
 const friend1 = {
   name: "reinaldog",
   phone: "01234561",
@@ -40,7 +57,7 @@ const colleague3 = {
   },
 };
 
-const colleagues = {
+export const colleagues: ColleagueHistory = {
   current: [colleague1, colleague2, colleague3],
   former: [],
 };
